@@ -15,7 +15,9 @@
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= render partial: 'layouts/nav' %>
-    <%= yield %>
+    <div class="wrapper">
+      <%= yield %>
+    </div>
     <%= render partial: 'layouts/footer' %>
   </body>
 </html>

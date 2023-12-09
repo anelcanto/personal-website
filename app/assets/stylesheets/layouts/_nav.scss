@@ -18,10 +18,10 @@
 
         &>li {
             padding: .5em .5em;
-            color: var(--nav-text-color);
+            color: var(--color-white);
             font-family: var(--font-family-primary);
-            font-size: var(--nav-font-size);
-            font-weight: var(--nav-font-weight);
+            font-size: var(--font-size-2xl);
+            font-weight: bold;
 
             &>a {
                 text-decoration: none;

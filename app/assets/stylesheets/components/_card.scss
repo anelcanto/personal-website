@@ -1,0 +1,99 @@
+.card {
+    --card-border: 1px solid #ccc;
+
+    padding-block: 1em;
+    border-bottom: var(--card-border);
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 90px;
+    gap: 1em;
+
+    &__text-container {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-block: .5em;
+    }
+
+
+    &__title {
+        @extend %text-with-ellipsis;
+        margin: 0;
+        font-family: var(--font-family--primary);
+    }
+
+    &__date {
+
+        font-family: var(--font-family--secondary);
+        margin: 0;
+    }
+
+    &__link {
+        display: none;
+    }
+
+    &__image {
+        // margin-block: 1em;
+        width: 90px;
+        // height: 70px;
+        margin: auto;
+        object-fit: cover;
+        border-radius: 14%;
+        aspect-ratio: 16/14;
+    }
+}
+
+
+
+
+
+
+
+
+// &__title {
+//     //     margin: 0;
+//     //     grid-area: title;
+//     //     align-self: center;
+
+//     font-family: 'Kollektif';
+// }
+
+
+
+
+//     text-overflow: ellipsis;
+//     overflow: hidden;
+//     white-space: 1;
+// }
+
+// &__meta {
+//     align-self: center;
+//     grid-area: meta;
+//     font-family: "Gidole", sans-serif;
+
+//     &__link {
+//         display: none;
+//         // border: green solid 1px;
+//         // padding: auto;
+//         //         font-size: 0.8rem;
+//         //         color: #999; 
+//     }
+
+//     //         width: max-content;
+//     //         height: max-content;
+//     //         font-size: 0.8rem;
+//     //         color: #999;
+// }
+
+
+
+%text-with-ellipsis {
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+}

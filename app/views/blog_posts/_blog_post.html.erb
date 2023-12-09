@@ -1,0 +1,13 @@
+
+<div class="card" id="<%= dom_id blog_post %>">
+    <div class="card__text-container">
+        <h3 class="card__title  text-with-ellipsis">
+            <%= blog_post.title%>
+        </h3>
+        <div class="card__meta-container">
+            <p class="card__date"> <%= blog_post.created_at.strftime("%B %d") %></p>
+            <a href="#" class="card__link">Read more →</a>
+        </div>
+    </div>
+    <img src="#" alt="article image" class="card__image">    
+</div>

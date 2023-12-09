@@ -17,7 +17,7 @@
   }
 
   &__social-link {
-    width: var(--space-xxxl);
+    width: var(--space-3xl);
     height: auto;
   }
 
@@ -29,7 +29,7 @@
   @include media(tabletAndUp) {
 
     &__banner {
-      height: var(--space-xxl);
+      height: var(--space-2xl);
       box-shadow: var(--shadow-large);
       background-color: var(--color-dark);
       color: var(--color-light);

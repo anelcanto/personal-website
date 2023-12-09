@@ -3,6 +3,7 @@
   height: 100svh;
 
   padding-block: var(--nav-height);
+  padding-inline: var(--space-4xl);
 
 
   display: flex;
@@ -13,6 +14,6 @@
   @include media(tabletAndUp) {
     // max-width: 60rem;
 
-    padding-block: var(--nav-height) calc(var(--nav-height) + var(--space-xxl));
+    padding-block: var(--nav-height) calc(var(--nav-height) + var(--space-2xl));
   }
 }

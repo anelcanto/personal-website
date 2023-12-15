@@ -1,15 +1,15 @@
-
 class BlogPostsController < ApplicationController
   before_action :authenticate_user!, except: %i[index show]
   before_action :set_blog_post, only: %i[show edit update destroy]
 
   # GET /blog_posts or /blog_posts.json
   def index
-    @blog_posts = BlogPost.all
+    @blog_posts = current_user&.admin? ? BlogPost.all : BlogPost.published
   end
 
   # GET /blog_posts/1 or /blog_posts/1.json
   def show; end
+
   # GET /blog_posts/new
   def new
     @blog_post = BlogPost.new
@@ -60,7 +60,11 @@ class BlogPostsController < ApplicationController
 
   # Use callbacks to share common setup or constraints between actions.
   def set_blog_post
-    @blog_post = user_signed_in? ? BlogPost.find(params[:id]) : BlogPost.published.find(params[:id])
+    if user_signed_in?
+      return @blog_post = current_user.admin? ? BlogPost.find(params[:id]) : current_user.blog_posts.find(params[:id])
+    end
+
+    @blog_post = BlogPost.published.find(params[:id])
   rescue ActiveRecord::RecordNotFound
     redirect_to root_path, notice: 'Blog post not found'
   end

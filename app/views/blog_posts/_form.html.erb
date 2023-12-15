@@ -22,6 +22,13 @@
   </div>
 
   <div>
+    <%= form.label :published_at, style: "display: block" %>
+    <%= form.datetime_select :published_at, include_blank: true %>
+  </div>
+
+  <%= form.hidden_field :user_id, value: current_user.id%>
+
+  <div>
     <%= form.submit %>
   </div>
 <% end %>

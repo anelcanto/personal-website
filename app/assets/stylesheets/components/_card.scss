@@ -13,19 +13,19 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding-block: .5em;
+        padding-block: var(--space-xs);
     }
 
 
     &__title {
         @extend %text-with-ellipsis;
         margin: 0;
-        font-family: var(--font-family--primary);
+        font-family: var(--font-family-primary);
     }
 
     &__date {
 
-        font-family: var(--font-family--secondary);
+        font-family: var(--font-family-secondary);
         margin: 0;
     }
 

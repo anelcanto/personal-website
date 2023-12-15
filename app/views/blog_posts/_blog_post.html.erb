@@ -7,6 +7,7 @@
         <div class="card__meta-container">
             <p class="card__date"> <%= blog_post.created_at.strftime("%B %d") %></p>
             <a href="#" class="card__link">Read more →</a>
+             <%= link_to "Show this blog post (#TODO Make the whole card clickable)", blog_post %>
         </div>
     </div>
     <img src="#" alt="article image" class="card__image">    

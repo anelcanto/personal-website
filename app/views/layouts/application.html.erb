@@ -13,10 +13,7 @@
   <body>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <%= render partial: 'layouts/nav' %>
-    <div class="wrapper">
-      <%= yield %>
-    </div>
-    <%= render partial: 'layouts/footer' %>
+    <%= yield %>
+    <script src="./node_modules/preline/dist/preline.js"></script>
   </body>
 </html>

@@ -6,6 +6,7 @@
     "@hotwired/turbo-rails": "^8.0.0-beta.1",
     "esbuild": "^0.19.8",
     "flowbite": "^2.2.1",
+    "preline": "^2.0.2",
     "sass": "^1.69.5"
   },
   "scripts": {

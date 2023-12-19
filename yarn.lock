@@ -27,7 +27,7 @@
   dependencies:
     idiomorph "https://github.com/basecamp/idiomorph#rollout-build"
 
-"@popperjs/core@^2.9.3":
+"@popperjs/core@^2.11.2", "@popperjs/core@^2.9.3":
   version "2.11.8"
   resolved "https://registry.npmjs.org/@popperjs/core/-/core-2.11.8.tgz"
   integrity sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==
@@ -174,6 +174,13 @@ picomatch@^2.0.4, picomatch@^2.2.1:
   version "2.3.1"
   resolved "https://registry.npmjs.org/picomatch/-/picomatch-2.3.1.tgz"
   integrity sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==
+
+preline@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.npmjs.org/preline/-/preline-2.0.2.tgz"
+  integrity sha512-CDBUb7TpJ5C3UbW3ynuC82MWs34o9jW9vgbyn4wiYRbHspLi6hff9R2Ug9tLVkQgdyjKXotI7RB9Sm71+3v+jQ==
+  dependencies:
+    "@popperjs/core" "^2.11.2"
 
 readdirp@~3.6.0:
   version "3.6.0"

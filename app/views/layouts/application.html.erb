@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="scroll-smooth">
   <head>
     <title>Anel - Software Developer</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -8,12 +8,15 @@
     <%= favicon_link_tag asset_path('favicon.ico') %>
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "tailwind", "actiontext", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
   <body>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
+    <%= render  "layouts/header" %>
     <%= yield %>
+    <%= render  "layouts/footer" %>
     <script src="./node_modules/preline/dist/preline.js"></script>
   </body>
 </html>

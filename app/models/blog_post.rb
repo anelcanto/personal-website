@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
 class BlogPost < ApplicationRecord
-  belongs_to :user
+  belongs_to :author, class_name: 'User'
+  has_rich_text :body
 
   validates :title, :body, presence: true
   scope :draft, -> { where(published_at: nil) }

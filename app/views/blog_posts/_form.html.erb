@@ -2,7 +2,6 @@
   <% if blog_post.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(blog_post.errors.count, "error") %> prohibited this blog_post from being saved:</h2>
-
       <ul>
         <% blog_post.errors.each do |error| %>
           <li><%= error.full_message %></li>
@@ -10,24 +9,19 @@
       </ul>
     </div>
   <% end %>
-
   <div>
     <%= form.label :title, style: "display: block" %>
     <%= form.text_field :title %>
   </div>
-
   <div>
     <%= form.label :body, style: "display: block" %>
-    <%= form.text_area :body %>
+    <%= form.has_rich_text :body %>
   </div>
-
   <div>
     <%= form.label :published_at, style: "display: block" %>
     <%= form.datetime_select :published_at, include_blank: true %>
   </div>
-
-  <%= form.hidden_field :user_id, value: current_user.id%>
-
+  <%console%>
   <div>
     <%= form.submit %>
   </div>

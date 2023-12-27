@@ -6,7 +6,7 @@ class BlogPost < ApplicationRecord
 
   validates :title, :body, presence: true
   scope :draft, -> { where(published_at: nil) }
-  scope :published, -> { where('published_at <= ?', Time.current) }
+  scope :published, -> { where('published_at <= ?', Time.current).order(published_at: :desc) }
   scope :scheduled, -> { where('published_at > ?', Time.current) }
 
   def draft?

@@ -15,13 +15,12 @@
   </div>
   <div>
     <%= form.label :body, style: "display: block" %>
-    <%= form.has_rich_text :body %>
+    <%= form.rich_text_area :body %>
   </div>
   <div>
     <%= form.label :published_at, style: "display: block" %>
-    <%= form.datetime_select :published_at, include_blank: true %>
+    <%= form.datetime_select :published_at, include_blank: true, selected: Time.now + (5 * 60)%>
   </div>
-  <%console%>
   <div>
     <%= form.submit %>
   </div>

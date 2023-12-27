@@ -6,7 +6,12 @@ class BlogPostsController < ApplicationController
 
   # GET /blog_posts or /blog_posts.json
   def index
-    @blog_posts = current_user&.admin? ? BlogPost.all : BlogPost.published
+    @blog_posts = BlogPost.published
+    redirect_to root_path, notice: 'No blog posts found' if @blog_posts.empty?
+  end
+
+  def my_posts
+    @blog_posts = current_user
   end
 
   # GET /blog_posts/1 or /blog_posts/1.json
@@ -23,7 +28,7 @@ class BlogPostsController < ApplicationController
   # POST /blog_posts or /blog_posts.json
   def create
     @blog_post = BlogPost.new(blog_post_params)
-    @blog_post.author_id = current_user.id
+    @blog_post.author = current_user
 
     respond_to do |format|
       if @blog_post.save
@@ -63,10 +68,6 @@ class BlogPostsController < ApplicationController
 
   # Use callbacks to share common setup or constraints between actions.
   def set_blog_post
-    if user_signed_in?
-      return @blog_post = current_user.admin? ? BlogPost.find(params[:id]) : current_user.blog_posts.find(params[:id])
-    end
-
     @blog_post = BlogPost.published.find(params[:id])
   rescue ActiveRecord::RecordNotFound
     redirect_to root_path, notice: 'Blog post not found'
@@ -74,7 +75,6 @@ class BlogPostsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def blog_post_params
-    # params.require(:blog_post).permit(:title, :body, :published_at, :user_id)
-    params.require(:blog_post).permit(:title, :body, :published_at, :author_id)
+    params.require(:blog_post).permit(:title, :body, :published_at)
   end
 end

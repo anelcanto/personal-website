@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class BlogPostsController < ApplicationController
   before_action :authenticate_user!, except: %i[index show]
   before_action :set_blog_post, only: %i[show edit update destroy]
@@ -11,7 +9,7 @@ class BlogPostsController < ApplicationController
   end
 
   def my_posts
-    @blog_posts = current_user
+    @blog_posts = current_user.blog_posts
   end
 
   # GET /blog_posts/1 or /blog_posts/1.json
@@ -59,7 +57,7 @@ class BlogPostsController < ApplicationController
     @blog_post.destroy!
 
     respond_to do |format|
-      format.html { redirect_to blog_posts_url, notice: 'Blog post was successfully destroyed.' }
+      format.html { redirect_to my_posts_url, notice: 'Blog post was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -75,6 +73,6 @@ class BlogPostsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def blog_post_params
-    params.require(:blog_post).permit(:title, :body, :published_at)
+    params.require(:blog_post).permit(:title, :published_at, :content)
   end
 end

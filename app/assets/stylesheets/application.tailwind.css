@@ -1,9 +1,7 @@
-
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import 'actiontext.css';
+@import "actiontext.css";
 
 @font-face {
   font-family: "Kollektif";

@@ -2,9 +2,11 @@
 
 class BlogPost < ApplicationRecord
   belongs_to :author, class_name: 'User'
-  has_rich_text :body
+  has_rich_text :content
 
-  validates :title, :body, presence: true
+  validates :title, presence: true
+  validates :content, presence: true
+
   scope :draft, -> { where(published_at: nil) }
   scope :published, -> { where('published_at <= ?', Time.current).order(published_at: :desc) }
   scope :scheduled, -> { where('published_at > ?', Time.current) }

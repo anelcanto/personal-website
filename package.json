@@ -5,6 +5,9 @@
     "@hotwired/stimulus": "^3.2.2",
     "@hotwired/turbo-rails": "^8.0.0-beta.1",
     "@rails/actiontext": "^7.1.2",
+    "@tiptap/core": "^2.1.13",
+    "@tiptap/pm": "^2.1.13",
+    "@tiptap/starter-kit": "^2.1.13",
     "esbuild": "^0.19.8",
     "flowbite": "^2.2.1",
     "preline": "^2.0.2",
@@ -14,5 +17,12 @@
   "scripts": {
     "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --public-path=/assets",
     "build:css": "sass ./app/assets/stylesheets/application.sass.scss:./app/assets/builds/application.css --no-source-map --load-path=node_modules"
+  },
+  "devDependencies": {
+    "@prettier/plugin-ruby": "^4.0.4",
+    "@tailwindcss/typography": "^0.5.10",
+    "prettier": "^3.1.1",
+    "prettier-plugin-erb": "^0.4.0",
+    "prettier-plugin-tailwindcss": "^0.5.9"
   }
 }

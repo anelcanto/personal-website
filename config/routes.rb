@@ -1,9 +1,13 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  resources :leads
   resources :blog_posts
   devise_for :users
-  get 'pages/home'
+  get 'pages/home', to: 'pages#home', as: :home
+  get 'pages/terms', to: 'pages#terms', as: :terms
+  get 'pages/privacy', to: 'pages#privacy', as: :privacy
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Non resource routes:

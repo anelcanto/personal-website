@@ -10,13 +10,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        kollektiff: ["Kollektiff", "sans-serif"],
-        gidole: ["Gidole", "sans-serif"],
-        // sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+        'russo': ['Russo One', 'sans-serif'],
+        'sans': ['Roboto', ...defaultTheme.fontFamily.sans],
       },
-      fontWeight: {
-        "kollektiff-bold": "700",
-      },
+
       colors: {},
     },
   },

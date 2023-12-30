@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v="urn:schemas-microsoft-com:vml">
+  <head>
+    <meta charset="utf-8">
+    <meta name="x-apple-disable-message-reformatting">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no, url=no">
+    <meta name="color-scheme" content="light dark">
+    <meta name="supported-color-schemes" content="light dark">
+    <!--[if mso]>
+      <noscript>
+        <xml>
+          <o:OfficeDocumentSettings xmlns:o="urn:schemas-microsoft-com:office:office">
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+          </o:OfficeDocumentSettings>
+        </xml>
+      </noscript>
+      <style>
+        td,th,div,p,a,h1,h2,h3,h4,h5,h6 {font-family: "Segoe UI", sans-serif; mso-line-height-rule: exactly;}
+      </style>
+    <![endif]-->
+    <title>New Lead Received</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+      /* Your custom CSS resets for email */
+      /*
+       * Here is where you can add your global email CSS resets.
+       *
+       * We use a custom, email-specific CSS reset, instead
+       * of Tailwind's web-optimized `base` layer.
+       *
+       * Styles defined here will be inlined.
+      */
+      img{
+          max-width: 100%;
+          vertical-align: middle;
+          line-height: 1
+      }
+      /* Tailwind CSS components */
+      /**
+       * @import here any custom CSS components - that is, CSS that
+       * you'd want loaded before the Tailwind utilities, so the
+       * utilities can still override them.
+      */
+      /* Tailwind CSS utility classes */
+      .absolute{
+          position: absolute
+      }
+      .m-0{
+          margin: 0
+      }
+      .mx-auto{
+          margin-left: auto;
+          margin-right: auto
+      }
+      .my-12{
+          margin-top: 48px;
+          margin-bottom: 48px
+      }
+      .mb-1{
+          margin-bottom: 4px
+      }
+      .mb-4{
+          margin-bottom: 16px
+      }
+      .mb-6{
+          margin-bottom: 24px
+      }
+      .mt-2{
+          margin-top: 8px
+      }
+      .mt-3{
+          margin-top: 12px
+      }
+      .mt-4{
+          margin-top: 16px
+      }
+      .mt-6{
+          margin-top: 24px
+      }
+      .mt-8{
+          margin-top: 32px
+      }
+      .block{
+          display: block
+      }
+      .inline-block{
+          display: inline-block
+      }
+      .flex{
+          display: flex
+      }
+      .table{
+          display: table
+      }
+      .hidden{
+          display: none
+      }
+      .h-10{
+          height: 40px
+      }
+      .w-1\/2{
+          width: 50%
+      }
+      .w-10{
+          width: 40px
+      }
+      .w-12{
+          width: 48px
+      }
+      .w-\[552px\]{
+          width: 552px
+      }
+      .w-\[600px\]{
+          width: 600px
+      }
+      .w-full{
+          width: 100%
+      }
+      .max-w-2xl{
+          max-width: 336px
+      }
+      .max-w-full{
+          max-width: 100%
+      }
+      .transform{
+          transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+      }
+      .cursor-default{
+          cursor: default
+      }
+      .items-center{
+          align-items: center
+      }
+      .justify-center{
+          justify-content: center
+      }
+      .gap-x-4{
+          column-gap: 16px
+      }
+      .rounded{
+          border-radius: 4px
+      }
+      .rounded-full{
+          border-radius: 9999px
+      }
+      .rounded-lg{
+          border-radius: 8px
+      }
+      .rounded-md{
+          border-radius: 6px
+      }
+      .border{
+          border-width: 1px
+      }
+      .border-blue-500{
+          border-color: #3b82f6
+      }
+      .bg-blue-600{
+          background-color: #2563eb
+      }
+      .bg-indigo-500{
+          background-color: #6366f1
+      }
+      .bg-red-50{
+          background-color: #fef2f2
+      }
+      .bg-red-500{
+          background-color: #ef4444
+      }
+      .bg-red-600{
+          background-color: #dc2626
+      }
+      .bg-slate-200{
+          background-color: #e2e8f0
+      }
+      .bg-slate-300{
+          background-color: #cbd5e1
+      }
+      .bg-slate-50{
+          background-color: #f8fafc
+      }
+      .bg-white{
+          background-color: #fff
+      }
+      .bg-cover{
+          background-size: cover
+      }
+      .bg-top{
+          background-position: top
+      }
+      .bg-no-repeat{
+          background-repeat: no-repeat
+      }
+      .p-0{
+          padding: 0
+      }
+      .p-12{
+          padding: 48px
+      }
+      .p-5{
+          padding: 20px
+      }
+      .p-6{
+          padding: 24px
+      }
+      .px-12{
+          padding-left: 48px;
+          padding-right: 48px
+      }
+      .px-6{
+          padding-left: 24px;
+          padding-right: 24px
+      }
+      .py-2{
+          padding-top: 8px;
+          padding-bottom: 8px
+      }
+      .py-3{
+          padding-top: 12px;
+          padding-bottom: 12px
+      }
+      .py-4{
+          padding-top: 16px;
+          padding-bottom: 16px
+      }
+      .py-8{
+          padding-top: 32px;
+          padding-bottom: 32px
+      }
+      .pb-8{
+          padding-bottom: 32px
+      }
+      .pl-4{
+          padding-left: 16px
+      }
+      .pr-4{
+          padding-right: 16px
+      }
+      .text-left{
+          text-align: left
+      }
+      .text-center{
+          text-align: center
+      }
+      .text-right{
+          text-align: right
+      }
+      .align-top{
+          vertical-align: top
+      }
+      .font-russo{
+          font-family: Russo One, sans-serif
+      }
+      .font-sans{
+          font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif
+      }
+      .text-2xl{
+          font-size: 24px
+      }
+      .text-4xl{
+          font-size: 36px
+      }
+      .text-base{
+          font-size: 16px
+      }
+      .text-lg{
+          font-size: 18px
+      }
+      .text-sm{
+          font-size: 14px
+      }
+      .text-xl{
+          font-size: 20px
+      }
+      .text-xs{
+          font-size: 12px
+      }
+      .font-medium{
+          font-weight: 500
+      }
+      .font-semibold{
+          font-weight: 600
+      }
+      .uppercase{
+          text-transform: uppercase
+      }
+      .capitalize{
+          text-transform: capitalize
+      }
+      .italic{
+          font-style: italic
+      }
+      .leading-12{
+          line-height: 48px
+      }
+      .leading-16{
+          line-height: 64px
+      }
+      .leading-6{
+          line-height: 24px
+      }
+      .leading-8{
+          line-height: 32px
+      }
+      .leading-full{
+          line-height: 100%
+      }
+      .leading-loose{
+          line-height: 2
+      }
+      .leading-none{
+          line-height: 1
+      }
+      .tracking-wider{
+          letter-spacing: 0.05em
+      }
+      .text-black{
+          color: #000
+      }
+      .text-blue-500{
+          color: #3b82f6
+      }
+      .text-blue-600{
+          color: #2563eb
+      }
+      .text-gray-500{
+          color: #6b7280
+      }
+      .text-gray-600{
+          color: #4b5563
+      }
+      .text-gray-700{
+          color: #374151
+      }
+      .text-indigo-700{
+          color: #4338ca
+      }
+      .text-red-600{
+          color: #dc2626
+      }
+      .text-slate-50{
+          color: #f8fafc
+      }
+      .text-slate-500{
+          color: #64748b
+      }
+      .text-slate-600{
+          color: #475569
+      }
+      .text-slate-700{
+          color: #334155
+      }
+      .text-white{
+          color: #fff
+      }
+      .transition-colors{
+          transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-duration: 150ms
+      }
+      .duration-300{
+          transition-duration: 300ms
+      }
+      .mso-padding-alt-\[16px_24px\]{
+          mso-padding-alt: 16px 24px
+      }
+      .mso-font-width-\[-100\%\]{
+          mso-font-width: -100%
+      }
+      .shadow-md{
+          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1)
+      }
+      .shadow-sm{
+          box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05)
+      }
+      .\[-webkit-font-smoothing\:antialiased\]{
+          -webkit-font-smoothing: antialiased
+      }
+      .\[text-decoration\:none\]{
+          text-decoration: none
+      }
+      .\[word-break\:break-word\]{
+          word-break: break-word
+      }
+      /* Your custom utility classes */
+      /*
+       * Here is where you can define your custom utility classes.
+       *
+       * We wrap them in the `utilities` @layer directive, so
+       * that Tailwind moves them to the correct location.
+       *
+       * More info:
+       * https://tailwindcss.com/docs/functions-and-directives#layer
+      */
+      .hover\:bg-blue-500:hover{
+          background-color: #3b82f6 !important
+      }
+      .hover\:bg-indigo-600:hover{
+          background-color: #4f46e5 !important
+      }
+      .hover\:bg-red-600:hover{
+          background-color: #dc2626 !important
+      }
+      .hover\:text-indigo-500:hover{
+          color: #6366f1 !important
+      }
+      .hover\:underline:hover{
+          text-decoration-line: underline !important
+      }
+      .hover\:\!\[text-decoration\:underline\]:hover{
+          text-decoration: underline !important
+      }
+      .focus\:outline-none:focus{
+          outline: 2px solid transparent !important;
+          outline-offset: 2px !important
+      }
+      .focus\:ring:focus{
+          --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color) !important;
+          --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color) !important;
+          box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000) !important
+      }
+      .focus\:ring-blue-300:focus{
+          --tw-ring-opacity: 1 !important;
+          --tw-ring-color: rgb(147 197 253 / var(--tw-ring-opacity)) !important
+      }
+      .focus\:ring-opacity-80:focus{
+          --tw-ring-opacity: 0.8 !important
+      }
+      @media (max-width: 600px){
+          .sm\:my-8{
+              margin-top: 32px !important;
+              margin-bottom: 32px !important
+          }
+          .sm\:inline-block{
+              display: inline-block !important
+          }
+          .sm\:w-6{
+              width: 24px !important
+          }
+          .sm\:w-full{
+              width: 100% !important
+          }
+          .sm\:px-0{
+              padding-left: 0 !important;
+              padding-right: 0 !important
+          }
+          .sm\:px-4{
+              padding-left: 16px !important;
+              padding-right: 16px !important
+          }
+          .sm\:px-6{
+              padding-left: 24px !important;
+              padding-right: 24px !important
+          }
+          .sm\:py-8{
+              padding-top: 32px !important;
+              padding-bottom: 32px !important
+          }
+          .sm\:pb-8{
+              padding-bottom: 32px !important
+          }
+          .sm\:text-3xl{
+              font-size: 30px !important
+          }
+          .sm\:leading-10{
+              line-height: 40px !important
+          }
+          .sm\:leading-8{
+              line-height: 32px !important
+          }
+      }
+    </style>
+  </head>
+  <body class="m-0 p-0 w-full [word-break:break-word] [-webkit-font-smoothing:antialiased] bg-slate-50">
+    <div class="hidden">
+      John Doe - ph: +1234567890, email: test@email.com
+      &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; 
+    </div>
+    <div role="article" aria-roledescription="email" aria-label="New Lead Received" lang="en">
+      <section class="max-w-2xl px-6 py-8 mx-auto bg-white ">
+        <header>
+          <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
+            <tr>
+              <td style="text-align: center;">
+                <a class="text-xl text-gray-600 font-russo mx-auto">
+                  Anel<span class="text-red-600">Canto</span>.com
+                </a>
+              </td>
+            </tr>
+          </table>
+        </header>
+        <main class="mt-8 font-sans ">
+          <h2 class="text-gray-700  font-sans">Hi Anel,</h2>
+          <p class="mt-4 text-gray-700">
+            There is a new lead in the system. Here are the details:
+          </p>
+          <div class="mt-4 p-5 bg-red-50 rounded-lg">
+            <p class="font-medium text-gray-700">Lead Name: <span class="text-gray-600">John Doe</span></p>
+            <p class="font-medium text-gray-700">Email: <span class="text-gray-600">johndoe@example.com</span></p>
+            <p class="font-medium text-gray-700">Contact: <span class="text-gray-600">+1234567890</span></p>
+          </div>
+          <p class="mt-6 text-gray-700">
+            Please take the necessary actions to follow up with the potential client.
+          </p>
+          <table cellpadding="0" cellspacing="0" role="none">
+            <tr>
+              <th class="bg-red-500 hover:bg-red-600 shadow-md rounded-full mso-padding-alt-[16px_24px]">
+                <a href="https://maizzle.com" class="block py-3 px-6 text-sm text-white leading-full [text-decoration:none]">
+                  View link
+                </a>
+              </th>
+            </tr>
+          </table>
+          <p class="mt-8 text-gray-600 ">
+            Thanks, <br>
+            Anel Canto
+          </p>
+        </main>
+        <footer class="mt-8">
+          <p class="text-gray-500 ">
+            This email was sent to <a href="#" class="text-blue-600 hover:underline " target="_blank">contact@anelcanto.com</a>.
+            If you'd rather not receive this kind of email, you can <a href="#" class="text-blue-600 hover:underline ">unsubscribe</a> or <a href="#" class="text-blue-600 hover:underline ">manage your email preferences</a>.
+          </p>
+          <p class="mt-3 text-gray-500 ">© 2023 Meraki UI. All Rights Reserved.</p>
+        </footer>
+      </section>
+    </div>
+  </body>
+</html>

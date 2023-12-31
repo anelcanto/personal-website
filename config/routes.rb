@@ -3,7 +3,7 @@
 Rails.application.routes.draw do
   resources :leads
   resources :blog_posts
-  devise_for :users
+
   get 'pages/home', to: 'pages#home', as: :home
   get 'pages/terms', to: 'pages#terms', as: :terms
   get 'pages/privacy', to: 'pages#privacy', as: :privacy
@@ -18,4 +18,8 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root 'pages#home'
+  devise_for :users, controllers: {
+    sessions: 'users/sessions',
+    registrations: 'users/registrations'
+  }
 end

@@ -1,2 +1,7 @@
-    <%= render @blog_post%>
- 
+<%= render @blog_post%>
+<% posts = @blog_posts.where.not(id: @blog_post.id) %>
+<!-- Section Index -->
+<% if posts.count > 0 %>
+  <%= render "section_index", blog_posts: posts %>
+<% end %>
+<!-- End Section Index -->

@@ -8,6 +8,7 @@ class User < ApplicationRecord
   has_many :blog_posts, foreign_key: :author_id
   validates :terms_of_service, acceptance: true
   enum role: { standard: 0, author: 1, moderator: 2, admin: 3 }
+  has_one_attached :avatar
 
   scope :admins, -> { where(role: 'admin') }
   def admin?

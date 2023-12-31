@@ -4,8 +4,10 @@
     <div class="overflow-hidden">
       <!-- Hero -->
       <%= render  "hero" %>
-      <!-- End Hero -->
-      <!-- ========== END MAIN CONTENT ========== -->
+      <%= turbo_frame_tag "contact_frame" do%>
+        <%= render 'contact' %>
+      <% end %>
     </div>
   </main>
+  <!-- ========== END MAIN CONTENT ========== -->
 <% end %>

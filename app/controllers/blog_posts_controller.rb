@@ -13,7 +13,9 @@ class BlogPostsController < ApplicationController
   end
 
   # GET /blog_posts/1 or /blog_posts/1.json
-  def show; end
+  def show
+    @blog_posts = BlogPost.published
+  end
 
   # GET /blog_posts/new
   def new

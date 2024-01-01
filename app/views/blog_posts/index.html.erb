@@ -1,0 +1,9 @@
+  <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+    <% if @blog_posts.count > 0 %>
+ 
+      <%= render "hero", blog_post: @blog_posts.first%>
+    <% end %>
+    <% if @blog_posts.offset(1).count > 0 %>
+        <%= render "card_group"%>
+    <% end %>
+  </div>

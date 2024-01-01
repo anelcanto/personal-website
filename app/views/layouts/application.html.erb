@@ -1,21 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html class="scroll-smooth">
   <head>
     <title>Anel - Software Developer</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= favicon_link_tag asset_path('favicon.ico') %>
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "tailwind","actiontext", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
-
   <body>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <%= render partial: 'layouts/nav' %>
-    <%= yield %>
-    <%= render partial: 'layouts/footer' %>
+
+    <%= render  "layouts/header" %>
+
+      <div class="overflow-hidden">
+        <%= yield %>
+      </div>
+    <%= render  "layouts/footer" %>
   </body>
 </html>
+

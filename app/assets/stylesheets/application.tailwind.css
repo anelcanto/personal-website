@@ -1,0 +1,17 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Russo+One&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "actiontext.css";
+
+
+/*
+
+@layer components {
+  .btn-primary {
+    @apply py-2 px-4 bg-blue-200;
+  }
+}
+
+*/

@@ -1,13 +1,36 @@
-   <!-- Card -->
-<%= link_to blog_post, class:"group block rounded-xl dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" do%>
-  <div class="aspect-w-16 aspect-h-9">
-    <img class="w-full object-cover rounded-xl" src="https://images.unsplash.com/photo-1668584054035-f5ba7d426401?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3465&q=80" alt="Image Description">
+<% comment do %>
+  <!-- Card -->
+  <%= link_to blog_post, class:"group block rounded-xl dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" do%>
+    <div class="aspect-w-16 aspect-h-9">
+      <%= image_tag blog_post.image, class:"w-full object-cover rounded-xl" %>
+    </div>
+    <h3 class="mt-2 text-lg font-medium text-gray-800 group-hover:text-blue-600 dark:text-gray-300 dark:group-hover:text-white">
+      <%= blog_post.title %>
+    </h3>
+    <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+      <%= blog_post.published_at.strftime('%b %e') %>
+    </p>
+  <% end %>
+  <!-- End Card -->
+<% end %>
+<!-- Card -->
+<%= link_to blog_post, className:"group flex flex-col h-full border border-gray-200 hover:border-transparent hover:shadow-lg transition-all duration-300 rounded-xl p-5 dark:border-gray-700 dark:hover:border-transparent dark:hover:shadow-black/[.4] dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" do %>
+  <div class="aspect-w-16 aspect-h-11">
+    <%= image_tag blog_post.image, class:"w-full object-cover rounded-xl" %>
   </div>
-  <h3 class="mt-2 text-lg font-medium text-gray-800 group-hover:text-blue-600 dark:text-gray-300 dark:group-hover:text-white">
-    <%= blog_post.title %>
-  </h3>
-  <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
-    <%= blog_post.published_at.strftime('%b %e') %>
-  </p>
+  <div class="my-6">
+    <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-300 dark:group-hover:text-white">
+      <%= blog_post.title %>
+    </h3>
+    <p class="mt-5 text-gray-600 dark:text-gray-400 line-clamp-2">
+      <%= truncate(blog_post.content.body.to_plain_text, length: 100, separator: ' ') %>
+    </p>
+  </div>
+  <div class="mt-auto flex items-center gap-x-3">
+    <%= image_tag @owner.avatar.variant(resize_to_limit: [100,100]), class:"w-8 h-8 rounded-full" %>
+    <div>
+      <h5 class="text-sm text-gray-800 dark:text-gray-200">By <%= blog_post.author.name %></h5>
+    </div>
+  </div>
 <% end %>
 <!-- End Card -->

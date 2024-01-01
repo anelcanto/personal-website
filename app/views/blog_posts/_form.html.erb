@@ -15,6 +15,10 @@
       <%= form.text_field :title %>
     </div>
     <div>
+      <%= form.label :image, style:"display: block" %>
+      <%= form.file_field(:image, accept: 'image/png,image/gif,image/jpeg') %>
+    </div>
+    <div>
       <%= form.label :content, style: "display: block" %>
       <%= form.rich_text_area :content %>
     </div>

@@ -5,8 +5,10 @@
       <!-- Hero -->
       <%= render  "hero" %>
       <%= turbo_frame_tag "contact_frame" do%>
-        <%= render 'contact' %>
+        <%# render 'contact' %>
       <% end %>
+      <% set_published_posts %>
+      <%= render  "blog_posts/section_index", blog_posts: @blog_posts %>
     </div>
   </main>
   <!-- ========== END MAIN CONTENT ========== -->

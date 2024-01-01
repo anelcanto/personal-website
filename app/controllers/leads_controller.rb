@@ -1,5 +1,5 @@
 class LeadsController < ApplicationController
-  before_action :set_lead, only: %i[ show edit update destroy ]
+  before_action :set_lead, only: %i[show edit update destroy]
 
   # GET /leads or /leads.json
   def index
@@ -7,8 +7,7 @@ class LeadsController < ApplicationController
   end
 
   # GET /leads/1 or /leads/1.json
-  def show
-  end
+  def show; end
 
   # GET /leads/new
   def new
@@ -16,8 +15,7 @@ class LeadsController < ApplicationController
   end
 
   # GET /leads/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /leads or /leads.json
   def create
@@ -25,7 +23,7 @@ class LeadsController < ApplicationController
 
     respond_to do |format|
       if @lead.save
-        format.html { redirect_to lead_url(@lead), notice: "Lead was successfully created." }
+        format.html { redirect_to lead_url(@lead), notice: 'Lead was successfully created.' }
         format.json { render :show, status: :created, location: @lead }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +36,7 @@ class LeadsController < ApplicationController
   def update
     respond_to do |format|
       if @lead.update(lead_params)
-        format.html { redirect_to lead_url(@lead), notice: "Lead was successfully updated." }
+        format.html { redirect_to lead_url(@lead), notice: 'Lead was successfully updated.' }
         format.json { render :show, status: :ok, location: @lead }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -52,19 +50,20 @@ class LeadsController < ApplicationController
     @lead.destroy!
 
     respond_to do |format|
-      format.html { redirect_to leads_url, notice: "Lead was successfully destroyed." }
+      format.html { redirect_to leads_url, notice: 'Lead was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_lead
-      @lead = Lead.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def lead_params
-      params.require(:lead).permit(:name, :email, :phone_number, :details)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_lead
+    @lead = Lead.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def lead_params
+    params.require(:lead).permit(:name, :email, :phone_number, :details)
+  end
 end

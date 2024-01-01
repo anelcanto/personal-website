@@ -6,4 +6,10 @@ module ApplicationHelper
 
     image_tag(@owner.avatar.variant(resize_to_limit: dimensions), class: class_name).html_safe
   end
+
+  def set_published_posts
+    @blog_posts = BlogPost.published
+  end
+
+  def comment; end
 end

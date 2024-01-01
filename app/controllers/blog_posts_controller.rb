@@ -75,6 +75,6 @@ class BlogPostsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def blog_post_params
-    params.require(:blog_post).permit(:title, :published_at, :content)
+    params.require(:blog_post).permit(:title, :published_at, :content, :image)
   end
 end

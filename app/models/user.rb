@@ -11,7 +11,14 @@ class User < ApplicationRecord
   has_one_attached :avatar
 
   scope :admins, -> { where(role: 'admin') }
+  scope :owner, -> { where(role: 'admin').first }
+  scope :authors, -> { where(blog_posts: '> 0') }
+
   def admin?
     role == 'admin'
+  end
+
+  def owner?
+    self == User.owner
   end
 end

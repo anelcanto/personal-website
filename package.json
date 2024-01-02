@@ -9,9 +9,7 @@
     "@tiptap/pm": "^2.1.13",
     "@tiptap/starter-kit": "^2.1.13",
     "esbuild": "^0.19.8",
-    "flowbite": "^2.2.1",
     "preline": "^2.0.2",
-    "sass": "^1.69.5",
     "trix": "^2.0.8"
   },
   "scripts": {
